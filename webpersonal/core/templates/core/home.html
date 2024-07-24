@@ -1,0 +1,29 @@
+{% extends "core/base.html" %}
+
+{%block title%}Portada{% endblock %}
+
+{%block background%}{%load static%}{%static 'core/img/inicio.jpg' %}{%endblock%}
+
+{% block headers%}
+<h1>Almacen Rural Ahuateno</h1>
+<span class="subheading">Diconsa</span>  
+{%endblock%}
+{%block content %}
+<div class="row">   
+    <div class="col-lg-4 col-md-3">
+        <h2 class="section-heading">MISIÓN</h2>   
+        <p align="left">CONTRIBUIR A GENERAR LA SEGURIDAD ALIMENTARIA DE MÉXICO, GARANTIZANDO EL ABASTO SOCIAL DE PRODUCTOS PARA QUE EL GOBIERNO DE LA REPUBLICA CUMPLA CON EL DERECHO CONSTITUCIONAL ALA ALIMENTACIÓN DE SUS HABITANTES.</p>
+    </div>
+   
+    <div class="col-lg-4 col-md-3">
+        <h2 class="section-heading">VISIÓN</h2>   
+        <p align="left">SOMOS LA RED DE ABASTO SOCIAL MAS GRANDE DEL PAÍS. SOMOS UN GRUPO DE MEXICANOS CON ESPÍRITU DE SERVICIO, QUE TRABAJAMOS UNIDOS PARA GARANTIZAR LA DISTRIBUCIÓN DE ALIMENTOS CON ALTO CONTENIDO NUTRICIONAL Y ECONÓMICAMENTE ACCESIBLES, PARA LA PROBLACIÓN EN CONDICIONES DE MARGINACIÓN.</p> 
+    </div>
+
+    <div class="col-lg-4 col-md-3">
+        <h2 class="section-heading">OBJETIVO</h2>   
+        <p align="left">GARANTIZAR EL ABASTO OPORTUNO DE PRODUCTOS BÁSICOS Y COMPLEMENTARIOS, A PRECIOS ACCESIBLES EN LOCALIDADES RURALES DE ALTA Y MUY ALTA MARGINACION, PARTICIPANDO CON TRANSPARENCIA Y EFICACIA EN SU DESARROLLO DE ACUERDO A SU CULTURA Y ENTORNO ECOLOGICO, BAJO UN ESQUEMA DE CORRECPONSABILIDAD ENTRE PROVEEDORES, TRABAJADORES, INSTANCIAS DE PARTICIPACION SOCIAL Y GOBIERNO.</p>
+    </div>  
+</div>
+{% endblock %}
+

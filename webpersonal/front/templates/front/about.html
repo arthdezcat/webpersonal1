@@ -1,0 +1,28 @@
+
+{% extends "core/base.html" %}
+{%block title%}Catalago{% endblock %}
+
+{%block background%}{%load static%}{%static 'core/img/product.jpg' %}{%endblock%}
+
+{% block headers%}
+<h1>Catalago </h1>
+<span class="subheading">Catalago de productos</span>
+{%endblock%}
+{%block content%}
+{% for Catalago in projectCatalago %}
+<div class="row"> 
+<div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="{{Catalago.image.url}}" alt="">
+  </div>
+  <div class="col-lg-7 col-md-8">
+    <h2 class="section-heading">{{Catalago.name}}</h2>
+    <p><b>Codigo:</b> {{Catalago.code}}</p>   
+    <p><b>Categoria:</b> {{Catalago.category}}</p>
+    <p><b>Descripcion:</b> {{Catalago.description}}, {{Catalago.extent}}</p>
+    <p><b>Precio:</b> {{Catalago.price}} $</p>
+    <p><b>Cantidad:</b> {{Catalago.amount}}</p>
+  </div>
+  </div>
+{% endfor %}
+{% endblock %}
+

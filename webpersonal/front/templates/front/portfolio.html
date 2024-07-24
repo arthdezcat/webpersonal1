@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+{%block title%}Tiendas{% endblock %}
+
+{%block background%}{%load static%}{%static 'core/img/tienda.png' %}{%endblock%}
+
+{% block headers%}
+<h1>Tiendas</h1>
+<span class="subheading">Tiendas</span>
+{%endblock%}
+{%block content %}
+{% for Sucursales in projectSucursales %}
+<!-- Proyecto -->
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{{Sucursales.image.url}}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{Sucursales.name}}</h2>   
+        <p><b>Numero de tienda:</b> {{Sucursales.code}}</p>
+        <p><b>Minucipio:</b> {{Sucursales.municipality}}</p>
+        <p><b>Descripcion:</b> {{Sucursales.description}}</p>
+        <p><b>Horario de atención:</b> {{Sucursales.schedule}}</p>
+        <p><b>Dias de atención:</b> {{Sucursales.days}}</p>
+    <!--{% if project.link %}
+   <p><a href="{{project.link}}">Más información</a></p>
+   {% endif %}-->
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+

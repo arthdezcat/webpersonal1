@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+{%block title%}Contacto{% endblock %}
+
+{%block background%}{%load static%}{%static 'core/img/contact.jpg' %}{%endblock%}
+
+{% block headers%}
+<h1>Contacto</h1>
+<span class="subheading">Contactos</span>
+{%endblock%}
+{%block content%}
+{% for Contactos in projectContactos %}
+<div class="row"> 
+  <div class="col-lg-3 col-md-4 offset-lg-1">
+    <img class="img-fluid avatar" src="{{Contactos.image.url}}" alt="">
+  </div>
+<div class="col-lg-8 col-md-10 mx-auto">    
+    <p><b>{{Contactos.name}} {{Contactos.last}}</b></p>
+    <br>
+    <p><b>Puesto de trabajo:</b> {{Contactos.position}}</p>   
+    <p><b>Correo Electronico:</b> {{Contactos.email}}</p>
+    <p><b>Telefono:</b> {{Contactos.phone}}</p>
+     <!--{% if project.link %}
+   <p><a href="{{project.link}}">Más información</a></p>
+   {% endif %}-->
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+

@@ -1,0 +1,33 @@
+{% extends "core/base.html" %}
+{%block title%}Ofertass{% endblock %}
+
+{%block background%}{%load static%}{%static 'core/img/ofert.jpg' %}{%endblock%}
+
+{% block headers%}
+<h1>Ofertas</h1>
+<span class="subheading">Ofertas de descuentos</span>
+{%endblock%}
+{%block content %}
+{% for Discounts in projectDiscounts %}
+<!-- Proyecto -->
+<div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{{Discounts.image.url}}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{Discounts.name}}</h2>   
+        <p><b>Codigo:</b> {{Discounts.code}}</p>
+        <p><b>Descripcion:</b> {{Discounts.description}}</p>
+        <p><b>Descuento:</b> {{Discounts.discount}} %</p>
+        <p><b>Precio:</b> {{Discounts.price}} $</p>
+        <p><b>Fechas de oferta:</b> {{Discounts.start}} de {{Discounts.startMonth}} al {{Discounts.ending}} de {{Discounts.monthOfCompletion}} del {{Discounts.year}}</p>
+        <p><b>Cantidad:</b> {{Discounts.amount}}</p>
+    <!--{% if project.link %}
+   <p><a href="{{project.link}}">Más información</a></p>
+   {% endif %}-->
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+
